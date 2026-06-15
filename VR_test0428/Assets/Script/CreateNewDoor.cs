@@ -19,6 +19,7 @@ public class CreateNewDoor : MonoBehaviour
         {
             Debug.Log("В®Б[В’Вс");
             Instantiate(Door);
+            open.open = false;
         }
     }
 }

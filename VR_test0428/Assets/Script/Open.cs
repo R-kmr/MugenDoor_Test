@@ -6,13 +6,13 @@ public class Open : MonoBehaviour
     public float OpenNum;
     Vector3 totte;
 
-    public bool open;
+    public bool open = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         name = gameObject.name;
-        open = false;
+        //open = false;
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class Open : MonoBehaviour
         if (open)
         {
             Destroy(Door);
-            open = false;
+            //open = false;
         }
 
         Debug.Log(open);
