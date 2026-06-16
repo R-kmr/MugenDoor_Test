@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Open : MonoBehaviour
 {
-    [SerializeField] GameObject Door; 
+    //[SerializeField] GameObject Door; 
     public float OpenNum;
     Vector3 totte;
 
@@ -11,7 +11,7 @@ public class Open : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        name = gameObject.name;
+        //name = gameObject.name;
         //open = false;
     }
 
@@ -22,17 +22,13 @@ public class Open : MonoBehaviour
 
         if(Mathf.Abs(totte.x) >= Mathf.Abs(OpenNum))
         {
-            //Debug.Log(name + "Open");
             open = true;
         }
 
         if (open)
         {
-            Destroy(Door);
-            //open = false;
+            Destroy(gameObject);
+            Debug.Log("デストロイ");
         }
-
-        Debug.Log(open);
-       
     }
 }
