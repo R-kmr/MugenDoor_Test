@@ -249,9 +249,10 @@ GameObject:
   - component: {fileID: 5838401494963963365}
   - component: {fileID: 2820804636823826183}
   - component: {fileID: 6239478936394445522}
+  - component: {fileID: -8270347179317146298}
   m_Layer: 0
   m_Name: "\u3010Left\u3011Slide"
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -589,6 +590,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68daf30aca868ca4bb3ca2f3af3c1ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Open
-  Door: {fileID: 7751806709780899462}
   OpenNum: -0.15
   open: 0
+--- !u!114 &-8270347179317146298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7751806709780899462}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f192d0ef2a8bb4e8f199e835d51ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreateNewDoor
+  RightSlide: {fileID: 1814519229062189253, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
+  LeftSlide: {fileID: 7751806709780899462}
