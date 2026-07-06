@@ -27,7 +27,7 @@ public class Open : MonoBehaviour
 
         if (open)
         {
-            Destroy(gameObject);
+           // Destroy(this.gameObject);
             Debug.Log("デストロイ");
         }
     }

@@ -73,6 +73,7 @@ m_ResolvedPackages:
     - 85.0.0
     - 201.0.0
     - 203.0.0
+    - 205.0.0-relbranch+public
     compatible:
     - 59.0.0
     - 60.0.0
@@ -105,8 +106,10 @@ m_ResolvedPackages:
     - 85.0.0
     - 201.0.0
     - 203.0.0
+    - 205.0.0-relbranch+public
     recommended: 
-    deprecated: []
+    deprecated:
+    - 205.0.0-relbranch+public
   dependencies:
   - name: com.unity.xr.hands
     version: 1.7.2
@@ -2299,6 +2302,7 @@ m_ResolvedPackages:
     - 1.17.0
     - 1.17.1
     - 1.18.0-pre.1
+    - 1.18.0-pre.2
     compatible:
     - 1.16.1
     - 1.17.0-pre.1
@@ -2306,6 +2310,7 @@ m_ResolvedPackages:
     - 1.17.0
     - 1.17.1
     - 1.18.0-pre.1
+    - 1.18.0-pre.2
     recommended: 1.16.1
     deprecated: []
   dependencies:
@@ -6726,10 +6731,12 @@ m_ResolvedPackages:
     - 1.7.3
     - 1.8.0-pre.1
     - 1.8.0
+    - 1.9.0-pre.1
     compatible:
     - 1.7.3
     - 1.8.0-pre.1
     - 1.8.0
+    - 1.9.0-pre.1
     recommended: 1.7.3
     deprecated: []
   dependencies:
