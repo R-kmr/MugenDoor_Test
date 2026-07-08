@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class GenerateDoor : MonoBehaviour
 {
@@ -16,11 +17,11 @@ public class GenerateDoor : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI Text;
 
-    public bool openCheck;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Door = GameObject.FindWithTag("Door");
+
     }
 
     // Update is called once per frame
@@ -45,12 +46,11 @@ public class GenerateDoor : MonoBehaviour
             Instantiate(NewDoor);
             Destroy(Door);
 
-            
             Opened++;
             string opened = Opened.ToString();
             Text.text = opened;
-
-            openCheck = false;
         }
     }
+
+  
 }
