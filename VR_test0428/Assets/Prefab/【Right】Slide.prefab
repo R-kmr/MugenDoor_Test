@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: b8e242df-df4a-4f64-813a-be97ad643454
+  instanceId: 64fb74d3-8438-4c9a-87ab-1432ee7da3f9
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -137,7 +137,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3338076629831244465
 Rigidbody:
@@ -359,9 +359,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68daf30aca868ca4bb3ca2f3af3c1ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Open
-  OpenNum: 0.15
+  OpenNum: 0.4
+  MoveNum: 0.1
   open: 0
-  speed: -0.008
+  speed: -0.004
 --- !u!1 &4077516449243283572
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: a7688dba-99ad-47b8-905d-d8ad054079cb
+  instanceId: 0dba6a49-b94c-4991-843f-5d1929b89893
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8

@@ -5,6 +5,7 @@ using System.Collections;
 public class GenerateDoor : MonoBehaviour
 {
     public GameObject Door;
+    GameObject OldDoor;
     public  GameObject NewDoor;
 
     int doorRnd;
@@ -28,9 +29,11 @@ public class GenerateDoor : MonoBehaviour
     void Update()
     {
         Door = GameObject.FindWithTag("Door");
+       // OldDoor = GameObject.FindWithTag("Open");
 
         if (Door.GetComponent<Open>().open)
         {
+            Debug.Log("おーーーーーぷん");
             doorRnd = Random.Range(1, 3);
 
             switch (doorRnd)
