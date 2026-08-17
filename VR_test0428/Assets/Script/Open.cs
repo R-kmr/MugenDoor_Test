@@ -47,7 +47,7 @@ public class Open : MonoBehaviour
 
     IEnumerator DoorMove()@   //‰œ‚©‚ç”àoŒ»
     {
-        while (transform.position.z > 0.2f)
+        while (transform.position.z > 0.4f)
         {
             transform.Translate(0, 0, speed);
             yield return new WaitForSeconds(0.01f);

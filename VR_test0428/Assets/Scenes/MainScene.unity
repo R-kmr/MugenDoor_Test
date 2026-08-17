@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8078786ac0ac9a4c93009c2e14461f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  limitTime: 30
+  limitTime: 100
   TimerText: {fileID: 1143811006}
 --- !u!1 &832575517
 GameObject:
@@ -2203,6 +2203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u3010Right\u3011Slide (2)"
       objectReference: {fileID: 0}
+    - target: {fileID: 1814519229062189253, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2309802731666949440, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05
@@ -2772,7 +2776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2309802731666949440, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2309802731666949440, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2801,6 +2805,10 @@ PrefabInstance:
     - target: {fileID: 2309802731666949440, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052557024146322469, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
