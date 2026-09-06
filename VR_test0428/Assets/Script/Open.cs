@@ -30,9 +30,9 @@ public class Open : MonoBehaviour
 
         totte = transform.position;
 
-        if (Mathf.Abs(totte.x) >= Mathf.Abs(MoveNum))
+        if (Mathf.Abs(totte.x) >= Mathf.Abs(MoveNum))　//OPEN判定
         {
-            this.gameObject.GetComponent<BoxCollider>().enabled = false;
+            this.gameObject.GetComponent<BoxCollider>().enabled = false;　//取っ手の判定を削除
 
             StartCoroutine("DoorOut");
         }
@@ -41,14 +41,13 @@ public class Open : MonoBehaviour
         if (Mathf.Abs(totte.x) > Mathf.Abs(OpenNum))
         {
             open = true;
-           // this.gameObject.tag = ("Open");
         }
 
     }
 
-    IEnumerator DoorMove()
+    IEnumerator DoorMove()　   //奥から扉出現
     {
-        while (transform.position.z > 0.2f)
+        while (transform.position.z > 0.4f)
         {
             transform.Translate(0, 0, speed);
             yield return new WaitForSeconds(0.01f);
@@ -57,7 +56,7 @@ public class Open : MonoBehaviour
         yield break;
     }
 
-    IEnumerator DoorOut()
+    IEnumerator DoorOut()　//とびら　横にスライドして消える
     {
         if (OpenNum > 0)
         {

@@ -1,11 +1,11 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GenerateDoor : MonoBehaviour
 {
     public GameObject Door;
-    GameObject OldDoor;
     public  GameObject NewDoor;
 
     int doorRnd;
@@ -13,7 +13,7 @@ public class GenerateDoor : MonoBehaviour
     [SerializeField] GameObject RightSlide;
     [SerializeField] GameObject LeftSlide;
 
-    int Opened = 0;
+    protected static int Opened = 0;　　//とびら　開けた数
 
 
     [SerializeField] TextMeshProUGUI Text;
@@ -33,7 +33,6 @@ public class GenerateDoor : MonoBehaviour
 
         if (Door.GetComponent<Open>().open)
         {
-            Debug.Log("おーーーーーぷん");
             doorRnd = Random.Range(1, 3);
 
             switch (doorRnd)
@@ -55,5 +54,9 @@ public class GenerateDoor : MonoBehaviour
         }
     }
 
-  
+
+    public static int GetScore()
+    {
+        return Opened;
+    }
 }

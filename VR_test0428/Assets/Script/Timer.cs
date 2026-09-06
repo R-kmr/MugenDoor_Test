@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -20,8 +21,14 @@ public class Timer : MonoBehaviour
         if(limitTime<0)
         {
             limitTime=0;
+            Invoke("ChangeScene", 2.0f);
         }
 
         TimerText.text = limitTime.ToString("F0");
+    }
+
+    void ChangeScene()
+    {
+        SceneManager.LoadScene("ResultScene");
     }
 }
