@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 1814519229062189253}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.8}
+  m_LocalPosition: {x: -0.2, y: 0, z: 0.8}
   m_LocalScale: {x: 0.025, y: 0.27, z: 0.025}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 7b20757a-6c11-4498-bd9e-f3cb198afb93
+  instanceId: c4a91caa-741b-4685-80c8-0f582c4c8331
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -136,8 +136,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 1, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4, y: 1, z: 5}
+  m_Center: {x: 1.5, y: 0, z: -4}
 --- !u!54 &3338076629831244465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -220,9 +220,9 @@ MonoBehaviour:
     ConstraintsAreRelative: 0
     MinX:
       Constrain: 1
-      Value: 0.05
+      Value: -0.2
     MaxX:
-      Constrain: 1
+      Constrain: 0
       Value: 0.25
     MinY:
       Constrain: 1
@@ -232,10 +232,10 @@ MonoBehaviour:
       Value: 0
     MinZ:
       Constrain: 1
-      Value: 0.2
+      Value: 0.4
     MaxZ:
       Constrain: 1
-      Value: 0.2
+      Value: 0.4
 --- !u!114 &1561815598280520887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,8 +248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68daf30aca868ca4bb3ca2f3af3c1ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Open
-  OpenNum: 0.4
-  MoveNum: 0.1
+  OpenNum: 0.2
+  MoveNum: 0.01
+  StopNum: 0.4
   open: 0
   speed: -0.004
 --- !u!1 &4077516449243283572
@@ -299,7 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: a803014f-2362-4006-bf3c-0f9c176ec84d
+  instanceId: 3575c77e-e165-4aac-b9d1-e313c11f6472
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8

@@ -264,7 +264,7 @@ Transform:
   m_GameObject: {fileID: 7751806709780899462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0, z: 0.8}
+  m_LocalPosition: {x: 0.1, y: 0, z: 0.8}
   m_LocalScale: {x: 0.025, y: 0.27, z: 0.025}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -366,8 +366,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 1, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4, y: 1, z: 5}
+  m_Center: {x: -1.5, y: 0, z: -4}
 --- !u!54 &6309357409309497966
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -449,11 +449,11 @@ MonoBehaviour:
   _constraints:
     ConstraintsAreRelative: 0
     MinX:
-      Constrain: 1
+      Constrain: 0
       Value: -0.25
     MaxX:
       Constrain: 1
-      Value: -0.05
+      Value: 0.1
     MinY:
       Constrain: 1
       Value: 0
@@ -462,10 +462,10 @@ MonoBehaviour:
       Value: 0
     MinZ:
       Constrain: 1
-      Value: 0.2
+      Value: 0.4
     MaxZ:
       Constrain: 1
-      Value: 0.2
+      Value: 0.4
 --- !u!114 &6239478936394445522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,7 +478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68daf30aca868ca4bb3ca2f3af3c1ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Open
-  OpenNum: -0.4
-  MoveNum: -0.1
+  OpenNum: -0.3
+  MoveNum: 0.01
+  StopNum: 0.4
   open: 0
   speed: -0.004
