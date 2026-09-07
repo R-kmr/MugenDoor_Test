@@ -794,6 +794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Open
   OpenNum: -0.15
   MoveNum: 0
+  StopNum: 0
   open: 0
   speed: 0
 --- !u!114 &807714752
@@ -2768,7 +2769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2309802731666949440, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.05
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2309802731666949440, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2806,9 +2807,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6052557024146322469, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 7344013804037251516, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
+      propertyPath: _constraints.MaxZ.Value
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344013804037251516, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
+      propertyPath: _constraints.MinX.Value
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7344013804037251516, guid: f55a129529f9f9347ac2e67a59229245, type: 3}
+      propertyPath: _constraints.MaxX.Constrain
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

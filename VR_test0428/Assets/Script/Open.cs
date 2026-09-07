@@ -7,21 +7,23 @@ using UnityEngine.UI;
 public class Open : MonoBehaviour
 {
     //[SerializeField] GameObject Door; 
-    public float OpenNum;
-    public float MoveNum;
+    public float OpenNum;  //Open判定の値
+    public float MoveNum;　//扉スライドに移る値
+    public float StopNum;  //扉　止まる位置
 
     Vector3 totte;
 
     public bool open = false;
 
     public float speed;
-
+    int Opened;
 
    // BoxCollider col;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         StartCoroutine("DoorMove");
+        Opened= GenerateDoor.GetScore();
     }
 
     // Update is called once per frame
@@ -30,12 +32,12 @@ public class Open : MonoBehaviour
 
         totte = transform.position;
 
-        if (Mathf.Abs(totte.x) >= Mathf.Abs(MoveNum))　//OPEN判定
-        {
-            this.gameObject.GetComponent<BoxCollider>().enabled = false;　//取っ手の判定を削除
+        //if (Mathf.Abs(totte.x) <= Mathf.Abs(MoveNum))　//OPEN判定
+        //{
+        //    this.gameObject.GetComponent<BoxCollider>().enabled = false;　//取っ手の判定を削除
 
-            StartCoroutine("DoorOut");
-        }
+        //    StartCoroutine("DoorOut");
+        //}
 
 
         if (Mathf.Abs(totte.x) > Mathf.Abs(OpenNum))
@@ -47,9 +49,9 @@ public class Open : MonoBehaviour
 
     IEnumerator DoorMove()　   //奥から扉出現
     {
-        while (transform.position.z > 0.4f)
+        while (transform.position.z > StopNum)
         {
-            transform.Translate(0, 0, speed);
+            transform.Translate(0, 0, (speed- Opened*0.001f));
             yield return new WaitForSeconds(0.01f);
         }
 
