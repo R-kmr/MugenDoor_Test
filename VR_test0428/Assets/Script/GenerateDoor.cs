@@ -12,6 +12,7 @@ public class GenerateDoor : MonoBehaviour
 
     [SerializeField] GameObject RightSlide;
     [SerializeField] GameObject LeftSlide;
+    [SerializeField] GameObject LeftPush;
 
     protected static int Opened = 0;　　//とびら　開けた数
 
@@ -33,7 +34,7 @@ public class GenerateDoor : MonoBehaviour
 
         if (Door.GetComponent<Open>().open)
         {
-            doorRnd = Random.Range(1, 3);
+            doorRnd = Random.Range(1, 4);
 
             switch (doorRnd)
             {
@@ -42,9 +43,12 @@ public class GenerateDoor : MonoBehaviour
 
                 case 2:
                     NewDoor = LeftSlide; break;
+
+                case 3:
+                    NewDoor = LeftPush;  break;
             }
 
-
+            Debug.Log(doorRnd);
             Instantiate(NewDoor);
             Destroy(Door);
 
