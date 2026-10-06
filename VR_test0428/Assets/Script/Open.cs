@@ -51,7 +51,7 @@ public class Open : MonoBehaviour
     {
         while (transform.position.z > StopNum)
         {
-            transform.Translate(0, 0, (speed- Opened*0.001f));
+            transform.Translate(0, 0, (speed- Opened*0.0001f));
             yield return new WaitForSeconds(0.01f);
         }
 
