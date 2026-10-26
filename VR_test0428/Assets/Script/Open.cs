@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Open : MonoBehaviour
 {
-    //[SerializeField] GameObject Door; 
     public float OpenNum;  //Open判定の値
     public float MoveNum;　//扉スライドに移る値
     public float StopNum;  //扉　止まる位置
@@ -18,12 +17,20 @@ public class Open : MonoBehaviour
     public float speed;
     int Opened;
 
-   // BoxCollider col;
+
+    GameObject generateDoor;
+
+    // BoxCollider col;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine("DoorMove");
-        Opened= GenerateDoor.GetScore();
+        //generateDoor= GameObject.Find("GenerateDoor");
+
+        //generateDoor.GetComponent<GenerateDoor>().Door = this.gameObject;
+        //generateDoor.GetComponent<GenerateDoor>().StartCoroutine("DoorMove");
+
+        //   StartCoroutine("DoorMove");
+        Opened = GenerateDoor.GetScore();
     }
 
     // Update is called once per frame
