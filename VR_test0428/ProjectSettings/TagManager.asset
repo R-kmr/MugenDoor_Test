@@ -7,6 +7,7 @@ TagManager:
   - Door
   - Opene
   - Open
+  - DoubleDoor
   layers:
   - Default
   - TransparentFX

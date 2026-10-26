@@ -12,7 +12,8 @@ public class GenerateDoor : MonoBehaviour
 
     [SerializeField] GameObject RightSlide;
     [SerializeField] GameObject LeftSlide;
-    [SerializeField] GameObject LeftPush;
+    [SerializeField] GameObject RightPull;
+    [SerializeField] GameObject LeftPull;
 
     protected static int Opened = 0;　　//とびら　開けた数
 
@@ -20,21 +21,27 @@ public class GenerateDoor : MonoBehaviour
     [SerializeField] TextMeshProUGUI Text;
 
 
+    public float OpenNum;  //Open判定の値
+    public float MoveNum;　//扉スライドに移る値
+    public float StopNum;  //扉　止まる位置
+    public float speed;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        Door = GameObject.FindWithTag("DoubleDoor");
+        StartCoroutine("DoorMove");
     }
 
     // Update is called once per frame
     void Update()
     {
         Door = GameObject.FindWithTag("Door");
-       // OldDoor = GameObject.FindWithTag("Open");
 
         if (Door.GetComponent<Open>().open)
         {
-            doorRnd = Random.Range(1, 4);
+            doorRnd = Random.Range(1, 5);
 
             switch (doorRnd)
             {
@@ -45,10 +52,12 @@ public class GenerateDoor : MonoBehaviour
                     NewDoor = LeftSlide; break;
 
                 case 3:
-                    NewDoor = LeftPush;  break;
+                    NewDoor = RightPull ;  break;
+
+                case 4:
+                    NewDoor = LeftPull; break;
             }
 
-            Debug.Log(doorRnd);
             Instantiate(NewDoor);
             Destroy(Door);
 
@@ -56,8 +65,21 @@ public class GenerateDoor : MonoBehaviour
             string opened = Opened.ToString();
             Text.text = opened;
         }
+
+        StartCoroutine("DoorMove");
+
     }
 
+    public IEnumerator DoorMove()　   //奥から扉出現
+    {
+        while (Door.transform.position.z > StopNum)
+        {
+            Door.transform.Translate(0, 0, (speed - Opened * 0.0001f));
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        yield break;
+    }
 
     public static int GetScore()
     {
