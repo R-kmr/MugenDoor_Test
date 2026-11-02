@@ -13,30 +13,22 @@ public class Open : MonoBehaviour
     Vector3 totte;
 
     public bool open = false;
+    public bool stop = false; //”à’èˆÊ’u‚©”»’è
 
     public float speed;
     int Opened;
-
-
-    GameObject generateDoor;
-
-    // BoxCollider col;
+ 
+    [SerializeField] GameObject Child;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //generateDoor= GameObject.Find("GenerateDoor");
-
-        //generateDoor.GetComponent<GenerateDoor>().Door = this.gameObject;
-        //generateDoor.GetComponent<GenerateDoor>().StartCoroutine("DoorMove");
-
-        //   StartCoroutine("DoorMove");
+        StartCoroutine("DoorMove");
         Opened = GenerateDoor.GetScore();
     }
 
     // Update is called once per frame
     void Update()
     {
-
         totte = transform.position;
 
         //if (Mathf.Abs(totte.x) <= Mathf.Abs(MoveNum))@//OPEN”»’è
@@ -49,6 +41,7 @@ public class Open : MonoBehaviour
 
         if (Mathf.Abs(totte.x) > Mathf.Abs(OpenNum))
         {
+            Destroy(Child);
             open = true;
         }
 
@@ -62,6 +55,7 @@ public class Open : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
 
+        stop = true;
         yield break;
     }
 

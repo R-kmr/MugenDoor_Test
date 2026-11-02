@@ -9,7 +9,7 @@ public class StartScript : MonoBehaviour
 
 
     [SerializeField] TextMeshProUGUI TimerText;
-    float countdown = 3f;
+    public float countdown = 3f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
