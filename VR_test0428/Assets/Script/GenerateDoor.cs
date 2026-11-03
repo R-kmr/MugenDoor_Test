@@ -30,8 +30,7 @@ public class GenerateDoor : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Door = GameObject.FindWithTag("DoubleDoor");
-       // StartCoroutine("DoorMove");
+     
     }
 
     // Update is called once per frame
@@ -66,20 +65,9 @@ public class GenerateDoor : MonoBehaviour
             Text.text = opened;
         }
 
-       // StartCoroutine("DoorMove");
 
     }
 
-    //public IEnumerator DoorMove()@   //‰œ‚©‚ç”àoŒ»
-    //{
-    //    while (Door.transform.position.z > StopNum)
-    //    {
-    //        Door.transform.Translate(0, 0, (speed - Opened * 0.0001f));
-    //        yield return new WaitForSeconds(0.01f);
-    //    }
-
-    //    yield break;
-    //}
 
     public static int GetScore()
     {
