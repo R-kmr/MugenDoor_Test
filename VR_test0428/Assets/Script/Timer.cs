@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
         if(limitTime<0)
         {
             limitTime=0;
-            Invoke("ChangeScene", 2.0f);
+            Invoke("ChangeScene", 0.5f);
         }
 
         TimerText.text = limitTime.ToString("F0");
