@@ -40,7 +40,11 @@ public class GenerateDoor : MonoBehaviour
 
         if (Door.GetComponent<Open>().open)
         {
-            doorRnd = Random.Range(1, 5);
+            if(Opened<=10)
+                doorRnd = Random.Range(1, 3);
+            else
+                doorRnd = Random.Range(1, 5);
+
 
             switch (doorRnd)
             {
