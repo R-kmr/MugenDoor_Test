@@ -17,13 +17,22 @@ public class Open : MonoBehaviour
 
     public float speed;
     int Opened;
- 
+
+
+    public AudioSource audioSource;
+    public AudioClip sound;Å@Å@//å¯â âπ
+
     [SerializeField] GameObject Child;
+
+    BoxCollider col;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         StartCoroutine("DoorMove");
         Opened = GenerateDoor.GetScore();
+
+        col = GetComponent<BoxCollider>();
+        col.enabled = false;
     }
 
     // Update is called once per frame
@@ -41,6 +50,7 @@ public class Open : MonoBehaviour
 
         if (Mathf.Abs(totte.x) > Mathf.Abs(OpenNum))
         {
+            audioSource.PlayOneShot(sound);       //å¯â âπ
             Destroy(Child);
             open = true;
         }
@@ -56,6 +66,7 @@ public class Open : MonoBehaviour
         }
 
         stop = true;
+        col.enabled = true;
         yield break;
     }
 

@@ -4,10 +4,15 @@ using UnityEngine;
 public class ChildObject : MonoBehaviour
 {
     [SerializeField] GameObject Door;
+
+    public AudioSource sound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         this.gameObject.transform.parent = Door.transform;
+
+        sound.Play();       //Œø‰Ê‰¹
     }
 
     // Update is called once per frame
@@ -17,6 +22,7 @@ public class ChildObject : MonoBehaviour
         if (Door.GetComponent<Open>().stop)
         {
             this.gameObject.transform.parent = null;
+            sound.Stop();
         }
     }
 }

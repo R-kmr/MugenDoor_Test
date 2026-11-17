@@ -27,10 +27,13 @@ public class GenerateDoor : MonoBehaviour
     public float speed;
 
 
+    public AudioSource audioSource;
+    public AudioClip sound;Å@Å@//å¯â âπ
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-     
+
     }
 
     // Update is called once per frame
@@ -40,7 +43,9 @@ public class GenerateDoor : MonoBehaviour
 
         if (Door.GetComponent<Open>().open)
         {
-            if(Opened<=10)
+            audioSource.PlayOneShot(sound);       //å¯â âπ
+
+            if (Opened<=10)
                 doorRnd = Random.Range(1, 3);
             else
                 doorRnd = Random.Range(1, 5);
